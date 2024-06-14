@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comic;
+use DateTime;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -10,8 +12,12 @@ class ComicController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
-        return view('comics.index');
+    {   $comicList = Comic::orderBy('title')->orderBy('sale_date')->get();
+
+        foreach ($comicList as $comic) {
+            $comic['sale_date'] = date_format(new DateTime($comic['sale_date']), 'd/m/Y');
+        }
+        return view('comics.index', compact('comicList'));
     }
 
     /**
@@ -33,9 +39,9 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**

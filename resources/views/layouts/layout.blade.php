@@ -9,6 +9,8 @@
 </head>
 <body>
     @include('layouts.partials.header')
-    @yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
 </body>
 </html>
