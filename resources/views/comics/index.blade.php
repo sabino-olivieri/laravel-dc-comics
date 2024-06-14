@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <h2>Lista dc comics</h2>
+    <h2 class="mt-5 pt-3">Lista dc comics</h2>
 
     <table class="table">
         <thead>

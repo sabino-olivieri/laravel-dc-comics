@@ -41,6 +41,9 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
+        
+        $comic['sale_date'] = date_format(new DateTime($comic['sale_date']), 'd/m/Y');
+
         return view('comics.show', compact('comic'));
     }
 
