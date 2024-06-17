@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="row mt-5 pt-3">
+    <div class="row mt-5 pt-5">
         <div class="card p-5 text-center">
             <h3 class="mb-4">Inserisci i dati del nuovo comic</h3>
 

@@ -1,7 +1,57 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~@fortawesome/fontawesome-free/css/all";
 
+a {
+    color: unset;
+}
+
 body {
     background-color: #1f1f1f;
     color: white;
+
+    .logo {
+        max-width: 40px;
+    }
+
+    .comic-list {
+        background-image: url('img/comic-list.webp');
+    }
+
+    .new-comic {
+        background-image: url('img/new-comic.jpg');
+    }
+    
+    h2 {
+        filter: grayscale(0);
+        position: absolute;
+        font-size: 2.5rem;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    .new-comic, .comic-list {
+        height: 500px;
+        filter: grayscale(1);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        transition: all 0.5s;
+        &:hover {
+            filter: grayscale(0);
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 10px;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    h2 {
+        filter: grayscale(0);
+    }
 }
