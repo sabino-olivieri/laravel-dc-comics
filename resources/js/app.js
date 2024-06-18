@@ -33,6 +33,8 @@ formDelete.forEach(elem => {
         overlayElem.classList.toggle("hidden");
     
         yesElem.addEventListener("click", () => {
+            modalElem.classList.toggle("hidden");
+            overlayElem.classList.toggle("hidden");
             elem.submit();
         }) 
     })
