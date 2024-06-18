@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comic;
 use DateTime;
 use Illuminate\Http\Request;
@@ -63,7 +64,7 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
         $comic->update($request->all());
         return redirect()->route('comics.show', ['comic' => $comic->id]);
