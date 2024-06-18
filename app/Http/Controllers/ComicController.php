@@ -78,4 +78,10 @@ class ComicController extends Controller
         $comic->delete();
         return redirect()->route('comics.index');
     }
+
+    public function trash()
+    {   
+        $comicList = Comic::onlyTrashed()->get();
+        return view('comics.trash', compact('comicList'));
+    }
 }

@@ -19,3 +19,5 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('comics', ComicController::class);
+
+Route::get('/trash', [ComicController::class, 'trash'])->name('comics.trash');

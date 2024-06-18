@@ -9,10 +9,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('comics.index')}}">Lista comic</a>
+                        <a class="nav-link active btn" aria-current="page" href="{{route('comics.index')}}">Lista comic</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route('comics.create')}}">Aggiungi nuovo comic</a>
+                        <a class="nav-link btn" aria-current="page" href="{{route('comics.create')}}">Aggiungi nuovo comic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" aria-current="page" href="{{route('comics.trash')}}">Cestino</a>
                     </li>
                 </ul>
             </div>
