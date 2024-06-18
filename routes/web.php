@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::resource('comics', ComicController::class);
 
 Route::get('/trash', [ComicController::class, 'trash'])->name('comics.trash');
+
+Route::put('/trash/{comic}', [ComicController::class, 'restore'])->name('comics.restore');

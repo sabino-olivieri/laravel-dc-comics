@@ -17,13 +17,13 @@
                     <td>{{ $comic['series'] }}</td>
                     <td>{{ $comic['sale_date'] }}</td>
                     <td class="d-flex gap-1">
-
+                        
     
-                        {{-- <form action="{{ route('comics.destroy', ['comic' => $comic['id']]) }}" method="post" class="delete">
+                        <form action="{{ route('comics.restore', ['comic' => $comic['id']]) }}" method="post" class="restore">
                             @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                        </form> --}}
+                            @method('PUT')
+                            <button class="btn btn-success"><i class="fa-solid fa-trash-can-arrow-up"></i> Recupera</button>
+                        </form>
     
                     </td>
                 </tr>
