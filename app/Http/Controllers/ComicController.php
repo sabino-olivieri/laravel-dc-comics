@@ -91,4 +91,11 @@ class ComicController extends Controller
         $comic->restore();
         return redirect()->route('comics.trash');
     }
+
+    public function delete(String $id)
+    {   
+        $comic = Comic::onlyTrashed()->find($id);
+        $comic->forceDelete();
+        return redirect()->route('comics.trash');
+    }
 }

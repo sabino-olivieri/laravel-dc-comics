@@ -23,3 +23,5 @@ Route::resource('comics', ComicController::class);
 Route::get('/trash', [ComicController::class, 'trash'])->name('comics.trash');
 
 Route::put('/trash/{comic}', [ComicController::class, 'restore'])->name('comics.restore');
+
+Route::delete('/trash/{comic}', [ComicController::class, 'delete'])->name('comics.delete');

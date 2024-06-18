@@ -25,6 +25,11 @@
                             <button class="btn btn-success"><i class="fa-solid fa-trash-can-arrow-up"></i> Recupera</button>
                         </form>
     
+                        <form action="{{ route('comics.delete', ['comic' => $comic['id']]) }}" method="post" class="restore">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger"><i class="fa-solid fa-bomb"></i> Distruggi</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach
